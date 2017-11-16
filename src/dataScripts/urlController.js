@@ -45,7 +45,9 @@ class urlController {
         let end = url.indexOf("/", 8);
         end = (end === -1) ? url.length : end;
         url = url.substring(0, end);
-        return (url.indexOf("localhost:8080", 0) === -1) ? url : (url + "/dust");
+        url = (url.indexOf("localhost:8080", 0) === -1) ? url : (url + "/dust");
+        url = (url.indexOf("/test-task-for-it-00", 0) === -1) ? url : (url + "/test-task-for-it-00");
+        return url;
     }
 
     static getParam (param) {
