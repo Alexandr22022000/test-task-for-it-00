@@ -1,0 +1,37 @@
+@import "navigation-bar";
+@import "../styles/colors";
+
+$arrow-height: $navigation-bar-height / 5 * 3;
+
+.go-to-back {
+  cursor: pointer;
+  display: inline-block;
+  margin: ($navigation-bar-height / 4) 0 ($navigation-bar-height / -2) 15px;
+  border-right: 2px solid $color-navigation-bar-border;
+}
+
+.go-to-back__arrow{
+  width: 0;
+  height: 0;
+  border: ($navigation-bar-height / 2) solid transparent;
+  border-top-color: $color-go-to-back;
+  margin: 0;
+  padding: 0;
+  float: left;
+
+  transform: rotate(90deg) translate(0px, 25px);
+  -webkit-transform: rotate(90deg) translate(0px, 25px);
+  -moz-transform: rotate(90deg) translate(0px, 25px);
+  -o-transform: rotate(90deg) translate(0px, 25px);
+  -ms-transform: rotate(90deg) translate(0px, 25px);
+}
+
+.go-to-back__arrow:before{
+  content:'';
+  width: 0;
+  height: 0;
+  border: ($arrow-height / 2) solid transparent;
+  border-top-color: $color-navigation-bar-background;
+  display: inline-block;
+  -webkit-transform: translate($arrow-height / -2, $navigation-bar-height / -2);
+}

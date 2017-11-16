@@ -1,0 +1,21 @@
+@import "../styles/colors";
+
+.alert-element {
+  height: 40vw;
+  width: 100%;
+}
+
+.alert-element__text {
+  font-size: 6vw;
+  margin-top: 15vw;
+  width: 100%;
+}
+
+.alert-element__loader {
+  margin: 10vw auto;
+  width: 20vw;
+  height: 20vw;
+  border: 2vw solid transparent;
+  border-left-color: $color-alert-item-loading;
+  border-right-color: $color-alert-item-loading;
+}

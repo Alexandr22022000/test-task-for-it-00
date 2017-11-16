@@ -1,0 +1,16 @@
+@import "fonts";
+
+.element__text {
+  padding: 10px 5px 5px 20px;
+  font-size: $font-element-text;
+}
+
+.element {
+  padding: 5px;
+  height: 195px;
+}
+
+.element__img {
+  width: 190px;
+  height: 190px;
+}

@@ -1,0 +1,9 @@
+@import "colors";
+
+.user-data {
+  vertical-align: top;
+}
+
+.user-data__text {
+  color: $color-user-data-text;
+}

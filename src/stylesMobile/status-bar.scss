@@ -1,0 +1,47 @@
+@import "../styles/colors";
+
+.status-bar__loading {
+  margin: 2vw 5vw;
+  width: 5vw;
+  height: 5vw;
+
+  border: 1vw solid transparent;
+  border-left-color: $color-status-loading;
+  border-right-color: $color-status-loading;
+}
+
+.status-bar__ok {
+  margin: 3vw 6vw;
+  width: 5vw;
+  height: 5vw;
+}
+
+.status-bar__error {
+  margin: 3vw 6vw;
+  width: 5vw;
+  height: 5vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .status-bar__loading {
+    margin: 1vw 5vw;
+    width: 2.5vw;
+    height: 2.5vw;
+
+    border: 0.5vw solid transparent;
+    border-left-color: $color-status-loading;
+    border-right-color: $color-status-loading;
+  }
+
+  .status-bar__ok {
+    margin: 1.5vw 6vw;
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .status-bar__error {
+    margin: 1.5vw 6vw;
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../styles/colors";
+@import "fonts";
+
+.alert-element {
+  height: 200px;
+  width: 100%;
+}
+
+.alert-element__text {
+  font-size: $font-alert-item-text;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.alert-element__loader {
+  margin: 40px auto;
+  width: 90px;
+  height: 90px;
+  border: 14px solid transparent;
+  border-left-color: $color-alert-item-loading;
+  border-right-color: $color-alert-item-loading;
+}

@@ -1,0 +1,5 @@
+@import "colors";
+
+.user-page-title__name, .user-page-title__online, .user-page-title__status {
+  color: $color-user-page-text;
+}

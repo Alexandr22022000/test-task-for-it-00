@@ -1,0 +1,14 @@
+@import "colors";
+
+.content__window {
+  border-left: 2px solid $color-window-border;
+  border-right: 2px solid $color-window-border;
+  margin: 0 auto;
+  display: table;
+}
+
+.content__scroll {
+  background-color: $color-window-background;
+  height: 100%;
+  overflow-y: auto;
+}

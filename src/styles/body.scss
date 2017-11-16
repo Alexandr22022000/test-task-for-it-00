@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //border: 1px solid red;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  body, html {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,24 @@
+@import "navigation-bar";
+@import "../styles/colors";
+
+.status-bar__loading {
+  margin: $navigation-bar-height / 2.9;
+  width: $navigation-bar-height / 2;
+  height: $navigation-bar-height / 2;
+
+  border: 7px solid transparent;
+  border-left-color: $color-status-loading;
+  border-right-color: $color-status-loading;
+}
+
+.status-bar__ok {
+  margin: $navigation-bar-height / 1.9;
+  width: $navigation-bar-height / 2;
+  height: $navigation-bar-height / 2;
+}
+
+.status-bar__error {
+  margin: $navigation-bar-height / 1.9;
+  width: $navigation-bar-height / 2;
+  height: $navigation-bar-height / 2;
+}

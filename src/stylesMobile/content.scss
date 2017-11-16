@@ -1,0 +1,28 @@
+.content__window {
+  width: 100%;
+  height: 100%;
+}
+
+.chat__text-new-message {
+  font-size: 3vmax;
+  min-height: 10%;
+  max-height: 30%;
+}
+
+.chat__send-new-message {
+  width: 10%;
+  font-size: 2vmax;
+}
+
+@media only screen and (orientation: landscape) {
+  .chat__text-new-message {
+    width: 100%;
+    font-size: 3vmax;
+    min-height: 10%;
+    max-height: 30%;
+  }
+
+  .chat__send-new-message {
+    font-size: 2vmax;
+  }
+}

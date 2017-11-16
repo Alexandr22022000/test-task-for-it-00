@@ -1,0 +1,29 @@
+@import "fonts";
+@import "navigation-bar";
+
+.search {
+  margin: ($navigation-bar-height/10) 20px;
+  height: 100%;
+}
+
+.search__input {
+  font-size: $font-search;
+  width: 500px;
+  height: ($navigation-bar-height * 0.75);
+  margin: ($navigation-bar-height * 0.25) 20px ($navigation-bar-height * 0.1);
+}
+
+
+@media only screen and (max-width: 900px) {
+  .search__input {
+    width: 77vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .search {
+    width: 77vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+}

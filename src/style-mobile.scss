@@ -1,0 +1,20 @@
+@import "./styles/body";
+@import "./stylesMobile/body";
+
+@import "./styles/navigation-bar";
+@import "./styles/user-data";
+@import "./styles/search";
+@import "./styles/status-bar";
+
+@import "./stylesMobile/navigation-bar";
+@import "./stylesMobile/user-data";
+@import "./stylesMobile/search";
+@import "./stylesMobile/status-bar";
+
+@import "./styles/content";
+@import "./styles/element";
+@import "./styles/alert-element";
+
+@import "./stylesMobile/content";
+@import "./stylesMobile/element";
+@import "./stylesMobile/alert-element";

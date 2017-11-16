@@ -1,0 +1,10 @@
+.navigation-bar__container {
+  height: 25vw;
+  width: 100%;
+}
+
+@media only screen and (orientation: landscape) {
+  .navigation-bar__container {
+    height: 12.5vw;
+  }
+}

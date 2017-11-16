@@ -1,0 +1,26 @@
+@import "../styles/colors";
+@import "fonts";
+
+.content__window {
+  width: 60%;
+  height: 100%;
+}
+
+/*
+---Change size---
+ */
+
+@media only screen and (max-width: 1200px) {
+  .content__window {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content__window {
+    width: 100%;
+    border: 0;
+    height: 100%;
+    margin-top: 0;
+  }
+}

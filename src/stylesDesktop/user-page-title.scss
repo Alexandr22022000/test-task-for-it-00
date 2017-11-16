@@ -1,0 +1,27 @@
+@import "fonts";
+
+.user-page-title {
+  padding: 15px;
+}
+
+.user-page-title__online, .user-page-title__status {
+  font-size: $font-user-page-status;
+}
+
+.user-page-title__name {
+  font-size: $font-user-page-name;
+}
+
+.user-page-title_top {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .user-page-title_top {
+    display: block;
+  }
+
+  .user-page-title_right {
+    display: none;
+  }
+}

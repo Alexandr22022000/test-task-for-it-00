@@ -1,0 +1,40 @@
+@import "colors";
+
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+.status-bar__loading {
+  display: block;
+  border-radius: 100%;
+
+  -webkit-animation: spin 600ms infinite linear;
+  -moz-animation: spin 600ms infinite linear;
+  -ms-animation: spin 600ms infinite linear;
+  animation: spin 600ms infinite linear;
+}
+
+.status-bar__ok {
+  display: none;
+  background-color: $color-status-ok;
+  border-radius: 100%;
+}
+
+.status-bar__error {
+  display: none;
+  background-color: $color-status-error;
+  border-radius: 100%;
+}

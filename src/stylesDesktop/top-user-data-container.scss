@@ -1,0 +1,24 @@
+.top-user-data-container {
+  display: table;
+  width: 100%;
+}
+
+.top-user-data-container__img, .top-user-data-container__text {
+  display: table-cell;
+}
+
+.top-user-data-container__text {
+  vertical-align: top;
+  text-align: right;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .top-user-data-container__text {
+    display: none;
+  }
+
+  .top-user-data-container__img {
+    width: 100%;
+  }
+}

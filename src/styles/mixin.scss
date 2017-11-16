@@ -1,0 +1,9 @@
+@import "colors";
+@import "../stylesDesktop/fonts";
+
+@mixin site ($isMobile) {
+  display: if($isMobile, block, table);
+  width: 100%;
+  height: 100%;
+  background-color: if($isMobile, $color-window-background, $color-background);
+}

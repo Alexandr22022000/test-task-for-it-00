@@ -1,0 +1,7 @@
+@import "fonts";
+@import "navigation-bar";
+
+.user-data {
+  font-size: $font-user-data;
+  margin: ($navigation-bar-height/3) 20px;
+}

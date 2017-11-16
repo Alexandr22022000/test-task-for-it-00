@@ -1,0 +1,23 @@
+@import "fonts";
+
+.user-page-state {
+  padding: 15px;
+}
+
+.user-page-state_bottom {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .user-page-state_bottom {
+    display: block;
+  }
+
+  .user-page-state_right {
+    display: none;
+  }
+}
+
+.user-page-title__work, .user-page-title__city {
+  font-size: $font-user-page-work;
+}

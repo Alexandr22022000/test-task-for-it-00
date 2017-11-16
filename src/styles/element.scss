@@ -1,0 +1,20 @@
+@import "colors";
+
+.element {
+  border: 2px solid $color-element-border;
+  cursor: pointer;
+  text-align: left;
+
+  display: table;
+}
+
+.element__img {
+  display: table-cell;
+}
+
+.element__text {
+  color: $color-element-text;
+  vertical-align: top;
+  width: 100%;
+  display: table-cell;
+}

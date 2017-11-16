@@ -1,0 +1,29 @@
+.search {
+  width: 98vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  height: 11vw;
+}
+
+.search__input {
+  font-size: 7vw;
+  width: 89vw;
+  height: 10vw;
+  margin: 0 5vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .search {
+    width: 98vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 5.5vw;
+  }
+
+  .search__input {
+    font-size: 3.5vw;
+    width: 89vw;
+    height: 5vw;
+    margin: 0 5vw;
+  }
+}

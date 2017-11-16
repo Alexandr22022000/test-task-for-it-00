@@ -1,0 +1,18 @@
+@import "colors";
+
+.navigation-bar__container {
+  background-color: $color-navigation-bar-background;
+  display: table;
+}
+
+.navigation-bar {
+  border-bottom: 2px solid $color-navigation-bar-border;
+}
+
+.navigation-bar__left, .navigation-bar__right {
+  display: inline-block;
+}
+
+.navigation-bar__right {
+  float: right;
+}
