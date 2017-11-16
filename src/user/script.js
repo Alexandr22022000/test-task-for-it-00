@@ -6,7 +6,7 @@ const request = require("../dataScripts/request"),
     userPage = require("../interfaceScripts/userPage"),
     urlController = require("../dataScripts/urlController"),
     checkDevise = require("../otherScripts/checkDevise"),
-    {METHOD_GET_USER, STATUS_ERROR} = require("../constants/constants"),
+    {METHOD_GET_USER, STATUS_ERROR, PARAM_ID} = require("../constants/constants"),
     store = {};
 
 checkDevise();
@@ -27,7 +27,7 @@ else {
         if (error) return urlController.getNewToken();
         store.userData.setUser(data);
 
-        let id = urlController.getParam("id=");
+        let id = urlController.getParam(PARAM_ID);
         if (!id) {
             store.statusBar.setStatus(STATUS_ERROR);
         }

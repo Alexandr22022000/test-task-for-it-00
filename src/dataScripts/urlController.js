@@ -1,16 +1,18 @@
+const {PARAM_TOKEN, PARAM_SEARCH_TEXT, PARAM_ITEMS_COUNT, PARAM_SCROLL_POSITION, PARAM_ID} = require("../constants/constants");
+
 class urlController {
     constructor (store) {
         this.store = store;
     }
 
     getToken () {
-        return urlController.getParam('access_token=');
+        return urlController.getParam(PARAM_TOKEN);
     }
 
     getSearchData () {
-        const text = urlController.getParam("search_text="),
-            itemsCount =  parseInt(urlController.getParam("items_count=")),
-            scrollPosition =  parseInt(urlController.getParam("scroll_position="));
+        const text = urlController.getParam(PARAM_SEARCH_TEXT),
+            itemsCount =  parseInt(urlController.getParam(PARAM_ITEMS_COUNT)),
+            scrollPosition =  parseInt(urlController.getParam(PARAM_SCROLL_POSITION));
 
         history.pushState(null, null, urlController.getCleanUrl());
 
@@ -19,25 +21,25 @@ class urlController {
     }
 
     setUrlSearch () {
-        this.setParam("search_text=", this.store.search.getValue());
-        this.setParam("items_count=", this.store.usersCount);
-        this.setParam("scroll_position=", this.store.usersList.getScrollPosition());
+        this.setParam(PARAM_SEARCH_TEXT, this.store.search.getValue());
+        this.setParam(PARAM_ITEMS_COUNT, this.store.usersCount);
+        this.setParam(PARAM_SCROLL_POSITION, this.store.usersList.getScrollPosition());
     }
 
     static goToMainPage (text) {
-        document.location.href = `${urlController.getCleanUrl()}#search_text=${text}`;
+        document.location.href = `${urlController.getCleanUrl()}#${PARAM_SEARCH_TEXT}=${text}`;
     }
 
     static getNewToken () {
-        document.location.href = `https://oauth.vk.com/authorize?client_id=6105599&display=page&redirect_uri=${this.getCleanUrl()}&scope=friends&response_type=token&v=5.6`;
+        document.location.href = `https://oauth.vk.com/authorize?client_id=6261615&display=page&redirect_uri=${this.getCleanUrl()}&scope=friends&response_type=token&v=5.6`;
     }
 
     static goToUserPage (id) {
         let buffer = urlController.getId(id, "element-text-");
-        if (buffer) return window.location.href = urlController.getCleanUrl() + "/user#id=" +  buffer;
+        if (buffer) return window.location.href = `${urlController.getCleanUrl()}/user#${PARAM_ID}=${buffer}`;
         buffer = urlController.getId(id, "element-img-");
-        if (buffer) return window.location.href = urlController.getCleanUrl() + "/user#id=" +  buffer;
-        window.location.href = urlController.getCleanUrl() + "/user#id=" + urlController.getId(id, "element-");
+        if (buffer) return window.location.href = `${urlController.getCleanUrl()}/user#${PARAM_ID}=${buffer}`;
+        window.location.href = `${urlController.getCleanUrl()}/user#${PARAM_ID}=${urlController.getId(id, "element-")}`;
     }
 
     static getCleanUrl () {
@@ -46,11 +48,12 @@ class urlController {
         end = (end === -1) ? url.length : end;
         url = url.substring(0, end);
         url = (url.indexOf("localhost:8080", 0) === -1) ? url : (url + "/dust");
-        url = (url.indexOf("/test-task-for-it-00", 0) === -1) ? url : (url + "/test-task-for-it-00");
+        url = (url.indexOf("test-hosting-00", 0) === -1) ? url : (url + "/test-task-for-it-00");
         return url;
     }
 
     static getParam (param) {
+        param = param + "=";
         const url = window.location.href;
         if (url.indexOf(param, 0) === -1) return null;
 
@@ -61,6 +64,7 @@ class urlController {
     }
 
     setParam (param, value) {
+        param = param + "=";
         const url = window.location.href;
         if (url.indexOf(param, 0) === -1) return this.addParam(param, value);
 

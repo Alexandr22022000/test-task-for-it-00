@@ -1,6 +1,11 @@
 # IntelliJ project files
 .idea
 *.iml
-dust
+/dust/script.js
+/dust/style.js
+/dust/style-mobile.js
+/dust/user/style.js
+/dust/user/script.js
+/dust/user/style-mobile.js
 /node_modules
 /test

@@ -1,3 +1,5 @@
+const {DEFAULT_IMG} = require("../constants/constants");
+
 class userPage {
     constructor () {
         this.name = document.getElementsByClassName("user-page-title__name");
@@ -32,7 +34,7 @@ class userPage {
             this.setDataSameElements(this.city[key], data.city ? "Город: " + data.city.title : "");
         }
 
-        let img = "https://akphoto3.ask.fm/095/881/054/-99997000-1tq2mj8-915nosf68ntdrap/original/file.jpg";
+        let img = DEFAULT_IMG;
         img = data.photo_200 ? data.photo_200 : img;
         this.img.src = img;
 

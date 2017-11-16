@@ -69,7 +69,7 @@ class request {
             fields: 'photo_200',
             count: count
         }, (error, data) => {
-            this.store.usersList.cleaning();
+            this.store.usersList.cleaning(false);
             this.store.usersList.addItems(data);
             this.store.usersCount = count;
             if (callback) callback();

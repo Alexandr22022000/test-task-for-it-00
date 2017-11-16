@@ -5,7 +5,7 @@ class search {
         this.input.onkeydown = (e) => {
             if (e.keyCode === 13) {
                 if (this.getValue() === "" || this.getValue() === null) {
-                    this.store.usersList.cleaning();
+                    this.store.usersList.cleaning(true);
                 }
                 else {
                     this.store.request.startSearch(10);

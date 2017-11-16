@@ -1,4 +1,5 @@
-const urlController = require("../dataScripts/urlController");
+const urlController = require("../dataScripts/urlController"),
+    {DEFAULT_IMG} = require("../constants/constants");
 
 class usersList {
     constructor (store) {
@@ -13,7 +14,7 @@ class usersList {
         };
 
         const searchData = store.urlController.getSearchData();
-        if (!searchData) return;
+        if (!searchData || searchData.text === "") return;
 
         this.store.search.setValue(searchData.text);
         this.store.request.startSearch(searchData.itemsCount ? searchData.itemsCount : 10, () => {
@@ -32,7 +33,7 @@ class usersList {
 
         let dataLine = "";
         for (let key in items) {
-            let img = "https://akphoto3.ask.fm/095/881/054/-99997000-1tq2mj8-915nosf68ntdrap/original/file.jpg";
+            let img = DEFAULT_IMG;
             img = items[key].photo_200 ? items[key].photo_200 : img;
             dataLine += `<div id="element-${items[key].id}" class="element"><img id="element-img-${items[key].id}" class="element__img" src="${img}"/><h1 id="element-text-${items[key].id}" class="element__text">${items[key].first_name} ${items[key].last_name}</h1></div>`;
         }
@@ -41,9 +42,9 @@ class usersList {
         this.addOnClicks();
     }
 
-    cleaning () {
+    cleaning (isCleanSearch) {
         this.isEnd = false;
-        this.list.innerHTML = "";
+        this.list.innerHTML = isCleanSearch ? `<div class="alert-element" id="alert-element"><h1 class="alert-element__text">Введите поисковый запрос</h1></div>` : "";
         this.items = [];
         this.list.scrollTop = 0;
     }
